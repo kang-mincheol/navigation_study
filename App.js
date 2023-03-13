@@ -21,7 +21,15 @@ class App extends Component {
       <NavigationContainer>
         <Stack.Navigator initialRouteName="User">
           <Stack.Screen name="Home" component={HomeScreen}/>
-          <Stack.Screen name="User" component={UserScreen}/>
+          <Stack.Screen
+            name="User"
+            component={UserScreen}
+            initialParams={{
+              userIdx: 50,
+              userName: 'Gildong',
+              userLastName: 'Go'
+            }}
+          />
         </Stack.Navigator>
       </NavigationContainer>
     )
